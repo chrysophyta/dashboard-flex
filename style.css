@@ -4,7 +4,15 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-
+svg.feather {
+  width: auto;
+  height: 20px;
+  color: rgb(104, 104, 104);
+  stroke-width: 1px;
+}
+ul {
+  padding: 0;
+}
 li {
   list-style: none;
 }
@@ -35,39 +43,77 @@ p.logo-text {
 }
 .top-menu {
   width: calc(100% - 280px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.top-menu button {
-  align-self: flex-start;
+
+.top-menu .menu-dropdowns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-.top-menu ul {
+.top-menu .menu-dropdowns li {
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.top-menu .user {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  font-weight: 300;
 }
-
-.top-me button {
-  background: none;
-  border: none;
-}
-
-.avatar {
+.top-menu .avatar {
   height: 32px;
   width: 32px;
   border-radius: 100%;
   background-color: black;
+  margin-right: 10px;
 }
-.user {
+
+.top-menu .menu-buttons {
   display: flex;
+  padding-left: 15px;
+}
+
+.top-menu .menu-buttons button {
+  background: none;
+  border: none;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .wrapper {
   display: flex;
+  height: calc(100vh - 65px);
 }
 .sidebar {
   border-right: 1px rgb(225, 225, 225) solid;
   width: 280px;
 }
+.sidebar li {
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 15px 0 15px;
+}
 .sidebar li a {
   color: #72777a;
   font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.sidebar li a > svg {
+  margin-right: 14px;
+  padding: 7.5px;
+}
+.sidebar li:first-child {
+  margin-top: 30px;
+}
+
+.main {
+  background-color: rgb(249, 250, 251);
+  width: calc(100% - 280px);
 }
